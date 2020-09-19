@@ -35,6 +35,13 @@ public class PracticePage {
 //    @FindBy(how = How.XPATH, using = "//legend[]")
 //    public static WebElement radioExample;
 
+    //a[@href='/pages/practice']
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Practice')]")
+    public static WebElement practiceBtn;
+
+    public void clickPractice(){
+        practiceBtn.click();
+    }
 
     public void selectRaido(){
         bmwRadio.click();
@@ -65,5 +72,4 @@ public class PracticePage {
         System.out.println(alertText);
         alertBtn.click();
     }
-
 }
